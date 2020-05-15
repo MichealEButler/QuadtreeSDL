@@ -14,7 +14,7 @@ public:
 
   void move(); // increments x or y each tick
 
-  void setX();
+  void setX(int x);
   void setY();
 
   int getX();

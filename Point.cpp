@@ -11,7 +11,7 @@ Point::Point(int x, int y)
 {
   _x = x;
   _y = y;
-  moveDir = 1;
+  moveDir = (rand() % 1) + 1;
 }
 
 Point::~Point()
@@ -21,7 +21,7 @@ Point::~Point()
 
 void Point::move()
 {
-  /*
+
   //move east
   if(moveDir == 1)
   {
@@ -48,13 +48,11 @@ void Point::move()
   }
   //go one direction
   //if out of bounds turn around
-  */
-  setX();
 }
 
-void Point::setX()
+void Point::setX(int x)
 {
-  _x++;
+  _x = _x + x;
 }
 
 void Point::setY()

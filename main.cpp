@@ -41,7 +41,7 @@ int main(int argc, char** argv)
     int h = rand() % range + min;
     points[i] = new Point(50, h);
 
-    //fill decalred here
+    //fill decalred here when adding outside loop
     qt->insert(points[i]);
   }
 
@@ -52,7 +52,7 @@ int main(int argc, char** argv)
   while(display->running())
   {
     //when declaring outside loop comment out below line
-    qt = new Quadtree(400,400,400,400, 2);
+    //qt = new Quadtree(400,400,400,400, 2);
 
     cout << "Created new QT " << endl;
     for(int i = 0; i < points.size(); i++)
@@ -61,7 +61,7 @@ int main(int argc, char** argv)
       //cout << "Point " << i << " x = " << points[i]->getX() << " y = " << points[i]->getY() << endl;
 
       //when declaring outside loop comment out below line
-      qt->insert(points[i]);
+      //qt->insert(points[i]);
     }
     display->updateDisplay();
     qt->drawTree(display->renderer);
@@ -74,7 +74,7 @@ int main(int argc, char** argv)
     cout << "Broke loop " << endl;
 
     //when declaring outside loop comment out below line
-    delete qt;
+    //delete qt;
   }
 
   display->cleanDisplay();
