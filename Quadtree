@@ -1,0 +1,1 @@
+ sudo g++ -g main.cpp Display.cpp DrawFunctions.cpp Point.cpp Quadtree.cpp -o main -lSDL2 -std=gnu++0x
